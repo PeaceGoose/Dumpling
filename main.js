@@ -24,7 +24,8 @@ var mainState = {
         this.cursor = game.input.keyboard.createCursorKeys();
 
         // Create the player in the middle of the game
-        this.player = game.add.sprite(70, 50, 'player');
+        this.player =game.add.sprite(70, 50, 'player');
+        
         this.score = 0;
 
         // Add gravity to make it fall
@@ -126,5 +127,3 @@ var game = new Phaser.Game(800, 600);
 game.state.add('main', mainState);
 game.state.start('main');
 
-var audio = new Audio('audio_file.mp3');
-audio.play();
