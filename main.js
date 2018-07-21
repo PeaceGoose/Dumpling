@@ -38,20 +38,27 @@ var mainState = {
 
         // Design the level. x = wall, o = coin, ! = lava.
         var level = [
-            'xxxxxxxxxxxxxxxxxxxxxx',
-            '!                    x',
-            '!                    x',
-            '!         o          x',
-            '!                    x',
-            '!     o   !    !     x',
-            'xxxxxxxxxxxxxxxx  o  x',
-            'x                    x',
-            'x                    x',
-            'x                    x',
-            'x                    x',
-            'x            x    o  x',
-            'x         x       x  x',
-            '!!!!!!!!!!!!!!!!!!!!!!'
+            'xxxxxxxxxxxxxxxxxxxxxx     ',
+            '!                    x     ',
+            '!                    x     ',
+            '!         o          x     ',
+            '!                    x     ',
+            '!     o   !    !     x     ',
+            'xxxxxxxxxxxxxxxx  o  x     ',
+            'x                    x     ',
+            'x                    x     ',
+            'x                    x     ',
+            'x      o             x     ',
+            'x      x     x    o  x     ',
+            'x         x       x  x     ',
+            '!  x  !!!!!!!!!!!!!!!!     ',
+            '!                          ',
+            '!                          ',
+            '!                          ',
+            '!   x                      ',
+            '!        o                 ',
+            '!        x      x         o',
+            '!                     xxxxx'
 
         ];
 
@@ -91,8 +98,8 @@ var mainState = {
         //check for player and enemy overlapping
         game.physics.arcade.overlap(this.player, this.enemies, this.restart, null, this);
 
-        if (this.score >= 3) {
-            var text = game.add.text(game.world.centerX, game.world.centerY, "You won",
+        if (this.score >= 7) {
+            var text = game.add.text(game.world.centerX, game.world.centerY, "Winner Winner Chicken Nugget!",
                 {
                     fill: 'white'
                 });
