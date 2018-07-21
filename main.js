@@ -58,7 +58,8 @@ var mainState = {
             '!   x                      ',
             '!        o                 ',
             '!        x      x         o',
-            '!                     xxxxx'
+            '!                     xxxxx',
+            '!!!!!!!!!!!!!!!!!!!!!!!!!!!'
 
         ];
 
@@ -115,6 +116,9 @@ var mainState = {
         }
         if (this.cursor.up.isDown && this.player.body.touching.down) {
             this.player.body.velocity.y = -200;
+        }
+        if (this.cursor.down.isDown) {
+            game.state.restart;
         }
     },
 
